@@ -5,8 +5,8 @@ document.getElementById('getWeatherBtn').addEventListener('click', function(even
 
     event.preventDefault();
     let cityName = document.getElementById('cityNameInput').value;
-    let UrlForcastWeather = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&APPID=88d022e97f75868e6967c259abf2708a`
-    let UrlCurrentWeather = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=88d022e97f75868e6967c259abf2708a`
+    let UrlForcastWeather = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&APPID=88d022e97f75868e6967c259abf2708a`
+    let UrlCurrentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=88d022e97f75868e6967c259abf2708a`
 
     findForcastWeather(UrlForcastWeather)
     findCurrentWeather(UrlCurrentWeather)
@@ -25,8 +25,8 @@ cityListItems.addEventListener('click', function(event){
 
     console.log(this)
     let selectedCityName = event.target.getAttribute('value');
-    let UrlForcastWeather = `http://api.openweathermap.org/data/2.5/forecast?q=${selectedCityName}&APPID=88d022e97f75868e6967c259abf2708a`;
-    let UrlCurrentWeather = `http://api.openweathermap.org/data/2.5/weather?q=${selectedCityName}&APPID=88d022e97f75868e6967c259abf2708a`;
+    let UrlForcastWeather = `https://api.openweathermap.org/data/2.5/forecast?q=${selectedCityName}&APPID=88d022e97f75868e6967c259abf2708a`;
+    let UrlCurrentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${selectedCityName}&APPID=88d022e97f75868e6967c259abf2708a`;
 
     findForcastWeather(UrlForcastWeather)
     findCurrentWeather(UrlCurrentWeather)
@@ -57,7 +57,7 @@ function findForcastWeather(UrlForcastWeather){
 
                 weatherTitleDiv.setAttribute('class','h5');
                 weatherTitleDiv.innerText = dateTitle;
-                weatherIconImg.setAttribute("src", `http://openweathermap.org/img/wn/${weatherIcon}.png`);
+                weatherIconImg.setAttribute("src", `https://openweathermap.org/img/wn/${weatherIcon}.png`);
                 weatherTempDiv.innerText = "Temp: " + temp + "°C";
                 weatherHumidityDiv.innerText = "Humidity: " + humidity + "%";
 
@@ -87,7 +87,7 @@ function findCurrentWeather(UrlCurrentWeather){
         console.log(data)
         if(data.cod === 200)
         {
-            let iconURL = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+            let iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
             console.log(iconURL)
             let weatherIcon = document.createElement('img')
             weatherIcon.setAttribute('src',iconURL);
@@ -123,7 +123,7 @@ function findCurrentWeather(UrlCurrentWeather){
     }).then(coords =>{
         if (coords != undefined)
         {
-            let UrlForcastUV = `http://api.openweathermap.org/data/2.5/uvi?APPID=88d022e97f75868e6967c259abf2708a&lat=${coords.lat}&lon=${coords.lon}`
+            let UrlForcastUV = `https://api.openweathermap.org/data/2.5/uvi?APPID=88d022e97f75868e6967c259abf2708a&lat=${coords.lat}&lon=${coords.lon}`
             fetch(UrlForcastUV)
             .then(res => res.json())
             .then(data => {
@@ -179,8 +179,8 @@ function loadStorage()
             }
         });
 
-        let UrlForcastWeather = `http://api.openweathermap.org/data/2.5/forecast?q=${activeCityName}&APPID=88d022e97f75868e6967c259abf2708a`;
-        let UrlCurrentWeather = `http://api.openweathermap.org/data/2.5/weather?q=${activeCityName}&APPID=88d022e97f75868e6967c259abf2708a`;
+        let UrlForcastWeather = `https://api.openweathermap.org/data/2.5/forecast?q=${activeCityName}&APPID=88d022e97f75868e6967c259abf2708a`;
+        let UrlCurrentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${activeCityName}&APPID=88d022e97f75868e6967c259abf2708a`;
 
         findForcastWeather(UrlForcastWeather)
         findCurrentWeather(UrlCurrentWeather)

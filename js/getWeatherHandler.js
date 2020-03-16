@@ -65,7 +65,7 @@ function findForcastWeather(UrlForcastWeather){
                 let elementID = 'day'+ index;
                 let currentWeatherContent = document.getElementById(elementID);
                 currentWeatherContent.innerHTML = '';
-                currentWeatherContent.setAttribute('class',"m-2 col bg-primary text-white");
+                currentWeatherContent.setAttribute('class',"m-2 col bg-primary text-white weatherForcast");
                 currentWeatherContent.appendChild(weatherTitleDiv);
                 currentWeatherContent.appendChild(weatherIconImg);
                 currentWeatherContent.appendChild(weatherTempDiv);

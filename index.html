@@ -35,28 +35,31 @@
                         <button id="getWeatherBtn" class="btn btn-primary"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
-                <ul class="list-group">
-                    <li href="#" class="list-group-item list-group-item-action active">City 1</li>
+                <ul class="list-group" id="cityList">
+                    <!-- <li href="#" class="list-group-item list-group-item-action active">City 1</li>
                     <li href="#" class="list-group-item list-group-item-action">City 2</li>
-                    <li href="#" class="list-group-item list-group-item-action">City 3</li>
+                    <li href="#" class="list-group-item list-group-item-action">City 3</li> -->
                   </ul>
             </form>        
         </div>
         <div class="col-7">
             <div class="p-3 border" id="weatherDisplayContent">
-                <div class="h2" id="cityName">City 1 <i id="weatherCondition" src=""></i> </div>
-                <div id="temperature">Temperature: 32 F</div>
-                <div id="humidity">Humidity: 41%</div>
-                <div id="windSpeed">Wind Speed: 4.7MPH</div>
-                <div id="UV">UV Index: 9.49</div>
+                <div class="p-3 row">
+                    <div class="h2" id="cityName">City Name</div>
+                    <div id= "weatherCondition"></div>
+                </div>
+                <div>Temperature:<span id="temperature"></span> °C </div>
+                <div>Humidity: <span  id="humidity"></span> %</div>
+                <div >Wind Speed: <span id="windSpeed"></span>MPH</div>
+                <div>UV Index: <span id="UV"></span> </div>
             </div>
             <div>
                 <div class="p-3 row">
-                    <div class="col">Day 1</div>
-                    <div class="col">Day 2</div>
-                    <div class="col">Day 3</div>
-                    <div class="col">Day 4</div>
-                    <div class="col">Day 5</div>
+                    <div class="col" id="day1">Day 1</div>
+                    <div class="col" id="day2">Day 2</div>
+                    <div class="col" id="day3">Day 3</div>
+                    <div class="col" id="day4">Day 4</div>
+                    <div class="col" id="day5">Day 5</div>
                 </div>
             </div>
         </div>

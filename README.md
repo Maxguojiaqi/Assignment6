@@ -29,7 +29,7 @@ If city name is invalid, user will be alert with error.
 ```
 Below is a screenshot when user enter the wrong name.
 
-![Display Weather](./Assets/wrongName.jpg)
+![Display Weather](./Assets/wrongName.JPG)
 
 
 This app runs in the browser and features dynamically updated HTML and CSS powered by Bootstrap.

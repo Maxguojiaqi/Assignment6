@@ -14,12 +14,14 @@
     <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body>
+    <!-- add the header -->
 <div class="h1 p-3 text-center text-white bg-dark">
     <h1> Weather Dashboard </h1>
 </div>
 
 <div class="m-3 container-fluid">
     <div class="row">
+        <!-- search section from the left  -->
         <div class="col-4">
             <form>
                 <div class="form-row">
@@ -38,7 +40,9 @@
                 <ul class="list-group" id="cityList"></ul>
             </form>        
         </div>
+        <!--  display section from the right  -->
         <div class="col-7">
+            <!-- current weather  -->
             <div class="p-3 border" id="weatherDisplayContent">
                 <div class="p-3 row">
                     <div class="h2" id="cityName">City Name</div>
@@ -50,6 +54,7 @@
                 <div>UV Index: <span id="UV"></span> </div>
             </div>
             <div>
+                <!-- 5 days weather -->
                 <div class="p-3 row">
                     <div id="day0"></div>
                     <div id="day1"></div>
